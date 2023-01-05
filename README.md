@@ -1,5 +1,5 @@
 # eventsapp
-
+A MEVN event booking application.
 ## Project setup
 ```
 npm install
