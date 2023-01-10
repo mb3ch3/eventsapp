@@ -45,7 +45,8 @@
                 <div class="search">
                     <i class="ri-search-2-line"></i>
                 </div>
-                <div class="buy-ticket">Register an Event!</div>
+                <router-link to="/create" class="buy-ticket">Register an Event!</router-link>
+                <!-- <div class="buy-ticket">Register an Event!</div> -->
             </div>
         </div>
     </div>
