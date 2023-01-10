@@ -23,10 +23,6 @@
 </template>
 <script>
 /* eslint-disable */
-import axios from 'axios'
-const proxy = {
-  '/createEvent' : "http://localhost:3000/createEvent"
-}
 import EventReg from "@/components/EventReg.vue";
 import EventList from "@/components/EventList.vue";
 import EventCat from "../components/EventCat.vue";
