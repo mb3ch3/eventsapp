@@ -1,9 +1,9 @@
 <template>
   <div class="events">
     <h2 class="events-header">Check out other featured events</h2>
-    <div class="error-msg" v-if="events.length < 1">
-            no featured events at the moment
-        </div>
+    <div class="error-msg" v-if="feat < 1">
+      no featured events at the moment
+    </div>
     <div v-else class="events-list">
       <div v-for="event in events" :key="event.id" class="event">
         <div v-if="event.featured">
@@ -11,6 +11,8 @@
             <EventCard :event="event" />
           </router-link>
         </div>
+
+        <!-- <div v-else>hhhdhsdidsi</div> -->
       </div>
     </div>
     <div class="more">Explore more <i class="ri-arrow-down-line"></i></div>
@@ -26,11 +28,12 @@ export default {
   },
   data() {
     return {
+      feat: 0,
       event: {},
       events: [
         {
           id: 1,
-          featured: false,
+          featured: true,
           name: "Charity Ball",
           category: "Fundraising",
           description:
@@ -48,7 +51,7 @@ export default {
         },
         {
           id: 2,
-          featured: true,
+          featured: false,
           name: "Kishash kwa Bash: Bashment volume 1, 2023",
           category: "Party",
           description:
@@ -60,8 +63,33 @@ export default {
           date: "30-01-2023",
           time: "18:00",
         },
+        {
+          id: 3,
+          featured: false,
+          name: "Charity Ball",
+          category: "Fundraising",
+          description:
+            "Spend an elegant night of dinner and dancing with us as we raise money for our new rescue farm.",
+          featuredImage:
+            "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668__340.jpg",
+          images: [
+            "https://placekitten.com/500/500",
+            "https://placekitten.com/500/500",
+            "https://placekitten.com/500/500",
+          ],
+          location: "1234 Fancy Ave",
+          date: "31-01-2023",
+          time: "11:30",
+        },
       ],
     };
+  },
+  mounted() {
+    var tt = this.events.filter(function (elem) {
+      if (elem.featured == true) return elem.id;
+    });
+    this.feat = tt.length
+    console.log(this.feat);
   },
 };
 </script>
