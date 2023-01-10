@@ -205,9 +205,7 @@ export default {};
   align-items: center;
   display: flex;
 }
-.field-input2 input {
-  /* padding: 20px; */
-}
+
 label {
   font-size: smaller;
   /* color: red; */
