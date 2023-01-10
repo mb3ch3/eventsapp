@@ -51,7 +51,7 @@ export default {
         },
         {
           id: 2,
-          featured: false,
+          featured: true,
           name: "Kishash kwa Bash: Bashment volume 1, 2023",
           category: "Party",
           description:
@@ -65,7 +65,7 @@ export default {
         },
         {
           id: 3,
-          featured: false,
+          featured: true,
           name: "Charity Ball",
           category: "Fundraising",
           description:
@@ -80,6 +80,38 @@ export default {
           location: "1234 Fancy Ave",
           date: "31-01-2023",
           time: "11:30",
+        },
+        {
+          id: 4,
+          featured: true,
+          name: "Charity Ball",
+          category: "Fundraising",
+          description:
+            "Spend an elegant night of dinner and dancing with us as we raise money for our new rescue farm.",
+          featuredImage:
+            "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668__340.jpg",
+          images: [
+            "https://placekitten.com/500/500",
+            "https://placekitten.com/500/500",
+            "https://placekitten.com/500/500",
+          ],
+          location: "1234 Fancy Ave",
+          date: "31-01-2023",
+          time: "11:30",
+        },
+        {
+          id: 5,
+          featured: true,
+          name: "Kishash kwa Bash: Bashment volume 1, 2023",
+          category: "Party",
+          description:
+            "Come to our donation drive to help us replenish our stock of pet food, toys, bedding, etc. We will have live bands, games, food trucks, and much more.",
+          featuredImage:
+            "https://teamorange.in/wp-content/uploads/2017/01/event-management-blog-1-performance.jpg",
+          images: ["https://placekitten.com/500/500"],
+          location: "Fogo Gaucho, Westlands",
+          date: "30-01-2023",
+          time: "18:00",
         },
       ],
     };
@@ -115,6 +147,7 @@ export default {
   // grid-column-gap: 20px;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .more {
   display: flex;
