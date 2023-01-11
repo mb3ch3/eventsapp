@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import CreateEvent from '../views/CreateEvent.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -18,15 +19,16 @@ const routes = [
     component: AboutView
   },
   {
+    path: '/create',
+    name: 'create',
+    component: CreateEvent,
+  },
+  {
     path: '/event/:id',
     name: 'eventSingle',
     component: () => import('../views/EventSingle.vue'),
   },
-  {
-    path: '/create',
-    name: 'createEvent',
-    component: CreateEvent,
-  }
+  
 ]
 
 const router = createRouter({

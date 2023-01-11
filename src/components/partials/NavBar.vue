@@ -34,7 +34,7 @@
         </div>
         <div class="navbar-nav">
             <div class="nav-items">
-                <router-link to="/" class="nav-item">Home</router-link>
+                <router-link :to="{ name: 'home'}" class="nav-item">Home</router-link>
                 <router-link to="/about" class="nav-item">About</router-link>
                 <div class="nav-item">Search Venues</div>
                 <div class="nav-item">Connect with Organizers</div>
@@ -45,13 +45,10 @@
                 <div class="search">
                     <i class="ri-search-2-line"></i>
                 </div>
-                <router-link to="/create" class="buy-ticket">Register an Event!</router-link>
-                <!-- <div class="buy-ticket">Register an Event!</div> -->
+                <router-link :to="{ name: 'create'}" class="buy-ticket">Register an Event!</router-link>
             </div>
         </div>
     </div>
-    <!-- <router-link to="/" class="navbar-item">Home</router-link>
-          <router-link to="/about" class="navbar-item">About</router-link> -->
   </template>
   <script>
     /* eslint-disable */

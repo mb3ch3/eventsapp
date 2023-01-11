@@ -41,7 +41,7 @@ export default {
     },
   },
   mounted() {
-    this.ghg();
+    // this.ghg();
   },
 };
 </script>

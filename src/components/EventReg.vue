@@ -8,7 +8,7 @@
       <div class="other-topic">Register your event with us</div>
     </div>
     <div class="right-reg">
-        <input type="text" v-model="email" placeholder="Kindly provide your email address">
+        <input type="text" placeholder="Kindly provide your email address">
         <i class="ri-chat-forward-line"></i>
     </div>
   </div>
