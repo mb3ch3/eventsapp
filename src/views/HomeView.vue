@@ -26,6 +26,8 @@
 import EventReg from "@/components/EventReg.vue";
 import EventList from "@/components/EventList.vue";
 import EventCat from "../components/EventCat.vue";
+import axios from "axios";
+
 export default {
   name: "home",
   components: {
@@ -35,13 +37,13 @@ export default {
   },
   methods: {
     ghg() {
-      axios.get('http://localhost:3000/createEvent').then((res)=>{
+      axios.get('http://localhost:3000/showEvents').then((res)=>{
         console.log(res);
       })
     },
   },
   mounted() {
-    // this.ghg();
+    this.ghg();
   },
 };
 </script>
