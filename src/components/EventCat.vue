@@ -124,7 +124,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .categories {
   background: #b0c4de30;
   padding: 0 6.5rem;
