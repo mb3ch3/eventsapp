@@ -1,6 +1,19 @@
 <template>
   <div class="form">
     <form v-on:submit.prevent method="post" v-on:submit="showdata" action="http://localhost:3000/createEvent">
+      <div class="field">
+        <div class="field-icon">
+          <i class="ri-edit-line"></i>
+            </div>
+            <div class="field-input">
+              <input
+                type="text"
+                v-model="body.eventname"
+                name="eventname"
+                placeholder="Enter event name"
+              />
+            </div>
+      </div>
       <div class="top-form">
         <div class="top-left">
           <div class="field">
@@ -91,7 +104,7 @@
             <i class="ri-image-add-fill"></i>
           </div>
           <div class="dropbox">
-            <BaseImageInput v-model="imageFile" />
+            <BaseImageInput v-model="body.imageFile" />
           </div>
         </div>
 
@@ -99,7 +112,7 @@
           <div class="field-icon">
             <i class="ri-image-add-fill"></i>
           </div>
-          <MultipleImageInput v-model="imageFile2" />
+          <MultipleImageInput v-model="body.imageFile2" />
         </div>
       </div>
       <div class="lower-form2">
@@ -154,17 +167,19 @@ export default {
     return {
       body: {
         organizer: "",
+        eventname:"",
         category: "",
         description: "",
         location: "",
         date: "",
         featuring: "",
         price: "",
+        imageFile: "",
+        imageFile2: "",
       },
       main: "",
       subs: [],
-      imageFile: null,
-      imageFile2: null,
+      
     };
   },
   methods: {
@@ -197,7 +212,7 @@ export default {
   padding: 30px;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
 }
 .top-form {
   display: grid;
